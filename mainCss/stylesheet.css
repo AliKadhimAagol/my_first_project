@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --main-color: #10cab7;
@@ -80,6 +83,14 @@ body {
 /* end global */
 
 /* Start header  */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: o;
+  z-index: 1000;
+  background-color: #fff;
+  width: 100%;
+}
 .main-header .container {
   display: flex;
   justify-content: space-between;
@@ -176,7 +187,7 @@ body {
 .landing {
   background-image: url(../images/landing.jpg);
   background-size: cover;
-  height: calc(100vh - 68px);
+  height: calc(100vh);
   margin: 0;
   position: relative;
 }
@@ -439,6 +450,12 @@ body {
   color: var(--main-color);
   display: block;
   padding-bottom: 20px;
+}
+@media (max-width: 375px) {
+  .contact .info .main-contact a,
+  .contact .info .main-contact p {
+    font-size: 25px;
+  }
 }
 .contact .info .social-links {
   display: flex;
